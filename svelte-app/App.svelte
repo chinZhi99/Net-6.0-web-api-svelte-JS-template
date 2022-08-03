@@ -1,30 +1,24 @@
 <script>
-	export let name;
+  	import configStore from "./stores/configStore.js";
+	import Navbar from "./components/navbar.svelte";
+	import ToDo from "./pages/todo.svelte";
+import Todo from "./pages/todo.svelte";
+
+	let config = null;
+	configStore.subscribe((data) => {
+		config = data;
+	});
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<Navbar>
+	<li class="nav-item">
+		<a class="nav-link active" aria-current="page" href="#">Test</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" aria-current="page" href="#">Test2</a>
+	</li>
+</Navbar>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+<Todo></Todo>
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
