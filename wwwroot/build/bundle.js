@@ -516,16 +516,11 @@ var app = (function () {
     	let a;
     	let i;
     	let t0;
-    	let button0;
+    	let button;
     	let span;
     	let t1;
     	let div0;
     	let ul;
-    	let t2;
-    	let form;
-    	let input;
-    	let t3;
-    	let button1;
     	let current;
     	let mounted;
     	let dispose;
@@ -539,18 +534,12 @@ var app = (function () {
     			a = element("a");
     			i = element("i");
     			t0 = space();
-    			button0 = element("button");
+    			button = element("button");
     			span = element("span");
     			t1 = space();
     			div0 = element("div");
     			ul = element("ul");
     			if (default_slot) default_slot.c();
-    			t2 = space();
-    			form = element("form");
-    			input = element("input");
-    			t3 = space();
-    			button1 = element("button");
-    			button1.textContent = "Search";
     			attr_dev(i, "class", "fa fa-home whiteText");
     			add_location(i, file$4, 20, 8, 552);
     			attr_dev(a, "class", "navbar-brand");
@@ -558,27 +547,16 @@ var app = (function () {
     			add_location(a, file$4, 19, 6, 473);
     			attr_dev(span, "class", "navbar-toggler-icon");
     			add_location(span, file$4, 31, 8, 893);
-    			attr_dev(button0, "class", "navbar-toggler");
-    			attr_dev(button0, "type", "button");
-    			attr_dev(button0, "data-bs-toggle", "collapse");
-    			attr_dev(button0, "data-bs-target", "#navbarSupportedContent");
-    			attr_dev(button0, "aria-controls", "navbarSupportedContent");
-    			attr_dev(button0, "aria-expanded", "false");
-    			attr_dev(button0, "aria-label", "Toggle navigation");
-    			add_location(button0, file$4, 22, 6, 608);
+    			attr_dev(button, "class", "navbar-toggler");
+    			attr_dev(button, "type", "button");
+    			attr_dev(button, "data-bs-toggle", "collapse");
+    			attr_dev(button, "data-bs-target", "#navbarSupportedContent");
+    			attr_dev(button, "aria-controls", "navbarSupportedContent");
+    			attr_dev(button, "aria-expanded", "false");
+    			attr_dev(button, "aria-label", "Toggle navigation");
+    			add_location(button, file$4, 22, 6, 608);
     			attr_dev(ul, "class", "navbar-nav me-auto mb-2 mb-lg-0");
     			add_location(ul, file$4, 34, 8, 1030);
-    			attr_dev(input, "class", "form-control me-2");
-    			attr_dev(input, "type", "search");
-    			attr_dev(input, "placeholder", "Search");
-    			attr_dev(input, "aria-label", "Search");
-    			add_location(input, file$4, 38, 10, 1166);
-    			attr_dev(button1, "class", "btn btn-outline-light");
-    			attr_dev(button1, "type", "submit");
-    			add_location(button1, file$4, 44, 10, 1331);
-    			attr_dev(form, "class", "d-flex");
-    			attr_dev(form, "role", "search");
-    			add_location(form, file$4, 37, 8, 1119);
     			attr_dev(div0, "class", "collapse navbar-collapse");
     			attr_dev(div0, "id", "navbarSupportedContent");
     			add_location(div0, file$4, 33, 6, 954);
@@ -596,8 +574,8 @@ var app = (function () {
     			append_dev(div1, a);
     			append_dev(a, i);
     			append_dev(div1, t0);
-    			append_dev(div1, button0);
-    			append_dev(button0, span);
+    			append_dev(div1, button);
+    			append_dev(button, span);
     			append_dev(div1, t1);
     			append_dev(div1, div0);
     			append_dev(div0, ul);
@@ -606,11 +584,6 @@ var app = (function () {
     				default_slot.m(ul, null);
     			}
 
-    			append_dev(div0, t2);
-    			append_dev(div0, form);
-    			append_dev(form, input);
-    			append_dev(form, t3);
-    			append_dev(form, button1);
     			current = true;
 
     			if (!mounted) {
@@ -1170,16 +1143,16 @@ var app = (function () {
     			attr_dev(a0, "aria-current", "Index");
     			attr_dev(a0, "href", "#");
     			toggle_class(a0, "active", /*currentPage*/ ctx[0] === "Index");
-    			add_location(a0, file, 26, 2, 659);
+    			add_location(a0, file, 26, 2, 658);
     			attr_dev(li0, "class", "nav-item");
-    			add_location(li0, file, 25, 1, 635);
+    			add_location(li0, file, 25, 1, 634);
     			attr_dev(a1, "class", "nav-link");
     			attr_dev(a1, "aria-current", "Todo");
     			attr_dev(a1, "href", "#");
     			toggle_class(a1, "active", /*currentPage*/ ctx[0] === "Todo");
-    			add_location(a1, file, 31, 2, 851);
+    			add_location(a1, file, 31, 2, 850);
     			attr_dev(li1, "class", "nav-item");
-    			add_location(li1, file, 30, 1, 827);
+    			add_location(li1, file, 30, 1, 826);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li0, anchor);
@@ -1379,7 +1352,7 @@ var app = (function () {
     			div = element("div");
     			if_block.c();
     			attr_dev(div, "class", "container-fluid mt-3");
-    			add_location(div, file, 37, 0, 1026);
+    			add_location(div, file, 37, 0, 1025);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1461,7 +1434,7 @@ var app = (function () {
     	});
 
     	/* Nav Logic */
-    	let currentPage = "Index";
+    	let currentPage = "Todo";
 
     	const handlePageNavigationOnClick = destination => {
     		$$invalidate(0, currentPage = destination);

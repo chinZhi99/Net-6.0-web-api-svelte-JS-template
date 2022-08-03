@@ -11,7 +11,7 @@
 	});
 
 	/* Nav Logic */
-	let currentPage = "Index";
+	let currentPage = "Todo";
 
 	const handlePageNavigationOnClick = (destination) => {
 		currentPage = destination;
