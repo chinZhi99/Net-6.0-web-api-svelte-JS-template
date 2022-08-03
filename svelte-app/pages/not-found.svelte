@@ -1,1 +1,7 @@
-<h1>Page Not Found - Error 404</h1>
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10 border border-secondary">
+        <h1>Page Not Found</h1>
+    </div>
+    <div class="col-1"></div>
+</div>
