@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-1" />
     <div class="col-10 border border-secondary">
-      <h1>Server Health CRUD</h1>
+      <h1>Todo Test CRUD</h1>
       <h3>Add</h3>
       <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
         <input type="text" id="add-name" placeholder="New to-do" />

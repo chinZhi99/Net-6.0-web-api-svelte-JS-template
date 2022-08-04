@@ -3,7 +3,7 @@
 	import Navbar from "./components/navbar.svelte";
 	import Index from "./pages/index.svelte";
 	import Todo from "./pages/todo.svelte";
-	import ServerHealth from "./pages/serverhealth.svelte";
+	import TodoTest from "./pages/todotest.svelte";
 	import PageNotFound from "./pages/not-found.svelte";
 
 	let config = null;
@@ -35,9 +35,9 @@
 		on:click={() => handlePageNavigationOnClick("Todo")}>Todo</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" class:active="{currentPage === "ServerHealth"}" 
+		<a class="nav-link" class:active="{currentPage === "TodoTest"}" 
 		aria-current="Todo" href="#" 
-		on:click={() => handlePageNavigationOnClick("ServerHealth")}>ServerHealth</a>
+		on:click={() => handlePageNavigationOnClick("TodoTest")}>TodoTest</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link" class:active="{currentPage === "NotFound"}" 
@@ -51,8 +51,8 @@
 		<Index></Index>
 	{:else if currentPage == "Todo"}
 		<Todo></Todo>
-	{:else if currentPage == "ServerHealth"}
-		<ServerHealth></ServerHealth>
+	{:else if currentPage == "TodoTest"}
+		<TodoTest></TodoTest>
 	{:else}
 		<PageNotFound></PageNotFound>
 	{/if}
