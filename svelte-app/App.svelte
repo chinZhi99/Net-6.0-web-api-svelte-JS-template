@@ -3,6 +3,7 @@
 	import Navbar from "./components/navbar.svelte";
 	import Index from "./pages/index.svelte";
 	import Todo from "./pages/todo.svelte";
+	import ServerHealth from "./pages/serverhealth.svelte";
 	import PageNotFound from "./pages/not-found.svelte";
 
 	let config = null;
@@ -33,6 +34,16 @@
 		aria-current="Todo" href="#" 
 		on:click={() => handlePageNavigationOnClick("Todo")}>Todo</a>
 	</li>
+	<li class="nav-item">
+		<a class="nav-link" class:active="{currentPage === "ServerHealth"}" 
+		aria-current="Todo" href="#" 
+		on:click={() => handlePageNavigationOnClick("ServerHealth")}>ServerHealth</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" class:active="{currentPage === "NotFound"}" 
+		aria-current="Todo" href="#" 
+		on:click={() => handlePageNavigationOnClick("NotFound")}>NotFound</a>
+	</li>
 </Navbar>
 
 <div class="container-fluid mt-3">
@@ -40,6 +51,8 @@
 		<Index></Index>
 	{:else if currentPage == "Todo"}
 		<Todo></Todo>
+	{:else if currentPage == "ServerHealth"}
+		<ServerHealth></ServerHealth>
 	{:else}
 		<PageNotFound></PageNotFound>
 	{/if}
